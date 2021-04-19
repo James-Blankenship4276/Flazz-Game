@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flazz Game", "Flazz Game\Flazz Game.csproj", "{7D1B6DB7-294A-4997-8075-23EFF7DEB5CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D1B6DB7-294A-4997-8075-23EFF7DEB5CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D1B6DB7-294A-4997-8075-23EFF7DEB5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D1B6DB7-294A-4997-8075-23EFF7DEB5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D1B6DB7-294A-4997-8075-23EFF7DEB5CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBD5DC36-628F-4674-8CE1-95A21B45FC9A}
+	EndGlobalSection
+EndGlobal

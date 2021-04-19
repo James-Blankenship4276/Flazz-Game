@@ -1,0 +1,24 @@
+﻿<Window x:Class="Flazz_Game.Quiz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Flazz_Game"
+        mc:Ignorable="d"
+        Title="Quiz" Height="450" Width="800">
+    <Grid x:Name="Quiz1">
+        <Grid.Background>
+            <ImageBrush ImageSource="iStock-184792097.jpg"/>
+        </Grid.Background>
+        <TextBox Name ="Question" HorizontalAlignment="Left" Height="89" Margin="35,31,0,0" TextWrapping="Wrap" Text="When did the Civil War started?" VerticalAlignment="Top" Width="721" TextChanged="TextBox_TextChanged" FontSize="36" BorderBrush="Black">
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <Button x:Name="Answer" Content="1861" HorizontalAlignment="Left" Height="71" Margin="35,194,0,0" VerticalAlignment="Top" Width="249" Click="Button_Click" FontSize="36" Background="White" BorderBrush="Black"/>
+        <Button x:Name="Wrong_1" Content="1681" HorizontalAlignment="Left" Height="71" Margin="511,194,0,0" VerticalAlignment="Top" Width="245" FontSize="36" Click="Wrong_1_Click" Background="White" BorderBrush="Black"/>
+        <Button x:Name="Wrong_2" Content="1762" HorizontalAlignment="Left" Height="72" Margin="35,305,0,0" VerticalAlignment="Top" Width="249" FontSize="36" Click="Wrong_2_Click" BorderBrush="Black" Background="White"/>
+        <Button x:Name="Wrong_3" Content="1672" HorizontalAlignment="Left" Height="72" Margin="511,305,0,0" VerticalAlignment="Top" Width="245" FontSize="36" Click="Wrong_3_Click" Background="White" BorderBrush="Black"/>
+
+    </Grid>
+</Window>

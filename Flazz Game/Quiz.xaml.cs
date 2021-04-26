@@ -19,10 +19,14 @@ namespace Flazz_Game
     /// </summary>
     public partial class Quiz : Window
     {
+    
+
         public Quiz()
         {
             InitializeComponent();
         }
+
+     
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {

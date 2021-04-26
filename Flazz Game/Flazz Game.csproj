@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Bridges.cs" />
     <Compile Include="Difficulty.xaml.cs">
       <DependentUpon>Difficulty.xaml</DependentUpon>
     </Compile>

@@ -24,7 +24,7 @@ namespace Flazz_Game
         public OleDbConnection cn;
         public Start_Menu()
         {
-            string connectionstring = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source =|DataDirectory|FlazzGame.accdb";
+            string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\FlazzGame.accdb";
             cn = new OleDbConnection(connectionstring);
             InitializeComponent();
         }
@@ -44,21 +44,24 @@ namespace Flazz_Game
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
+         
             int i = 0;
-            string query = "select * from Categories";
+            string query = "select * from Quiz";
             OleDbCommand cmd = new OleDbCommand(query, cn);
             cn.Open();
             OleDbDataReader read = cmd.ExecuteReader();
             string data = "";
+
+            while (read.Read())
+            {
+                data += read[1]+ "\n";
+            }
             
-           
-            
-                data += read[1].ToString() + "\n";
-           
 
 
-           
-         
+
+
+
             Quiz quiz = new Quiz();
             quiz.Show();
             quiz.Question.Text = data;
@@ -73,5 +76,6 @@ namespace Flazz_Game
             this.Visibility = Visibility.Hidden;//https://stackoverflow.com/questions/33823326/this-close-doesnt-work-in-window-wpf/33823397
             this.Close();
         }
+      
     }
 }

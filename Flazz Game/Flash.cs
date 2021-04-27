@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace Flazz_Game
 {
-   public class Flash
+   public partial class Flash
     {
         public OleDbConnection cn;
         public int id;

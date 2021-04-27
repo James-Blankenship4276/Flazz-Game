@@ -43,5 +43,15 @@ namespace Flazz_Game.Properties {
                 return ((string)(this["FlazzGameConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\FlazzGame1.accdb")]
+        public string FlazzGame1ConnectionString {
+            get {
+                return ((string)(this["FlazzGame1ConnectionString"]));
+            }
+        }
     }
 }

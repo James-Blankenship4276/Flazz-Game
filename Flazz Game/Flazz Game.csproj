@@ -55,9 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Bridges.cs" />
     <Compile Include="Difficulty.xaml.cs">
       <DependentUpon>Difficulty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FlazzGame1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlazzGame1DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FlazzGameDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -120,6 +124,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="FlazzGame1DataSet.xsc">
+      <DependentUpon>FlazzGame1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FlazzGame1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FlazzGame1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FlazzGame1DataSet.xss">
+      <DependentUpon>FlazzGame1DataSet.xsd</DependentUpon>
+    </None>
     <None Include="FlazzGameDataSet.xsc">
       <DependentUpon>FlazzGameDataSet.xsd</DependentUpon>
     </None>
@@ -147,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FlazzGame.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FlazzGame1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

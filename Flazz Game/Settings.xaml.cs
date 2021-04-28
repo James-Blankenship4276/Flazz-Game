@@ -34,6 +34,7 @@ namespace Flazz_Game
             MainWindow main = new MainWindow();
             Start_Menu start = new Start_Menu();
             Settings settings = new Settings();
+            main.Foreground = Brushes.Black;
             main.Background = Brushes.Black;
             start.Background = Brushes.Black;
         }

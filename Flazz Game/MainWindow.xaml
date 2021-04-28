@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:Flazz_Game"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="0,0,0,2">
         <Grid.Background>
+
             <ImageBrush ImageSource="iStock-184792097.jpg"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; Flazz Game" VerticalAlignment="Top" Height="133" Width="782" FontSize="36"/>

@@ -24,6 +24,7 @@ namespace Flazz_Game
         public MainWindow()
         {
             InitializeComponent();
+            Sound.PlayBackgroundMusic();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)//Start menu

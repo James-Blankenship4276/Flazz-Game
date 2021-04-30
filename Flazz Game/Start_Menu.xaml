@@ -11,7 +11,6 @@
             <ImageBrush ImageSource="iStock-184792097.jpg"/>
         </Grid.Background>
         <Button Name="Categories" Content="Catogories " HorizontalAlignment="Left" VerticalAlignment="Top" Width="209" Height="70" Click="Button_Click" FontSize="36" Margin="267,118,0,0" Background="White" BorderBrush="Black"/>
-        <Button Name ="Difficulty" Content="Difficulty" HorizontalAlignment="Left" VerticalAlignment="Top" Width="209" Height="70" Margin="267,188,0,0" FontSize="36" Click="Button_Click_1" Background="White" BorderBrush="Black"/>
         <Button Name="Start" Content="Start Quiz " HorizontalAlignment="Left" VerticalAlignment="Top" Width="209" Margin="544,325,0,0" Height="70" FontSize="36" Click="Start_Click" Background="White" BorderBrush="Black"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="113" Width="782" FontSize="36"><Run Text="&#x9;&#x9;"/><LineBreak/><Run Text="&#x9;&#x9; Start Menu  "/></TextBlock>
         <Button x:Name ="Back" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="129" Margin="41,325,0,0" Height="70" Click="Main_Click" FontSize="36" Background="White" BorderBrush="Black"/>

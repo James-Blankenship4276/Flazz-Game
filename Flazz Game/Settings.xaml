@@ -10,11 +10,10 @@
         <Grid.Background>
             <ImageBrush ImageSource="iStock-184792097.jpg"/>
         </Grid.Background>
-        <Button Name="Mute" Content="Mute " HorizontalAlignment="Left" VerticalAlignment="Top" Width="217" Margin="255,147,0,0" Height="70" Click="Button_Click" FontSize="36" Background="White" BorderBrush="Black"/>
-        <Button Name="Dark" Content="Dark" HorizontalAlignment="Left" VerticalAlignment="Top" Width="217" Margin="255,217,0,0" Height="70" FontSize="36" Click="Dark_Click" Background="White" BorderBrush="Black"/>
-        <Button Name="Light" Content="Light" HorizontalAlignment="Left" VerticalAlignment="Top" Width="217" Margin="255,287,0,0" Height="70" FontSize="36" Click="Light_Click" Background="White" BorderBrush="Black"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="            Settings" VerticalAlignment="Top" Height="106" Width="782" FontSize="72"/>
         <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="70" Margin="28,324,0,0" Click="Main_Click" FontSize="36" Background="White" BorderBrush="Black"/>
+        <Button x:Name="Music_on" Content="UnMute" HorizontalAlignment="Left" Height="58" Margin="293,149,0,0" VerticalAlignment="Top" Width="185" FontSize="36" Background="White" BorderBrush="Black" Click="Music_on_Click"/>
+        <Button x:Name="Music_off" Content="Mute" HorizontalAlignment="Left" Height="59" Margin="293,229,0,0" VerticalAlignment="Top" Width="185" FontSize="36" Background="White" BorderBrush="Black" Click="Music_off_Click"/>
 
     </Grid>
 </Window>

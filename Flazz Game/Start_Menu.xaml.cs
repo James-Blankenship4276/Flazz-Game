@@ -32,15 +32,20 @@ namespace Flazz_Game
         private void Button_Click(object sender, RoutedEventArgs e) //Categories
         {
 
-
-        }
-        private void Button_Click_1(object sender, RoutedEventArgs e) //Difficulty
-        {
-            Difficulty difficulty = new Difficulty();
-            difficulty.Show();
+            Quiz quiz = new Quiz();
+            quiz.Show();
             this.Visibility = Visibility.Hidden;
             this.Close();
+            Flash flash = new Flash();
+            //flash.load_quiz();
+            Bridges bridges = new Bridges();
+
+            bridges.Load_Bridges();
+
+            bridges.Questions(0);
+            bridges.Load(0);
         }
+      
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {

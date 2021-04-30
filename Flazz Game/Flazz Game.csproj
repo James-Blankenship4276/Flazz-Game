@@ -79,6 +79,7 @@
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Sound.cs" />
     <Compile Include="Start_Menu.xaml.cs">
       <DependentUpon>Start_Menu.xaml</DependentUpon>
     </Compile>
@@ -113,8 +114,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Settings.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Start_Menu.xaml">
       <SubType>Designer</SubType>
@@ -176,6 +177,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Update.zip" />
     <None Include="_FlazzGame1_new1DataSet.xsc">
       <DependentUpon>_FlazzGame1_new1DataSet.xsd</DependentUpon>
     </None>
@@ -209,6 +211,8 @@
     <Resource Include="iStock-184792097.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Sound\bensound-theelevatorbossanova.mp3" />
+    <Content Include="Sound\bensound-theelevatorbossanova.wav" />
     <Content Include="FlazzGame.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

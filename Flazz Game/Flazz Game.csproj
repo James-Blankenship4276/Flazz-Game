@@ -63,6 +63,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FlazzGame1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FlazzGame1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlazzGame1DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FlazzGameDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,6 +81,16 @@
     </Compile>
     <Compile Include="Start_Menu.xaml.cs">
       <DependentUpon>Start_Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="_FlazzGame1_new1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_FlazzGame1_new1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_FlazzGame1_new1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_FlazzGame1_new1DataSet1.xsd</DependentUpon>
     </Compile>
     <Page Include="Difficulty.xaml">
       <SubType>Designer</SubType>
@@ -135,6 +150,17 @@
     <None Include="FlazzGame1DataSet.xss">
       <DependentUpon>FlazzGame1DataSet.xsd</DependentUpon>
     </None>
+    <None Include="FlazzGame1DataSet1.xsc">
+      <DependentUpon>FlazzGame1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FlazzGame1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FlazzGame1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FlazzGame1DataSet1.xss">
+      <DependentUpon>FlazzGame1DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="FlazzGameDataSet.xsc">
       <DependentUpon>FlazzGameDataSet.xsd</DependentUpon>
     </None>
@@ -150,6 +176,28 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="_FlazzGame1_new1DataSet.xsc">
+      <DependentUpon>_FlazzGame1_new1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_FlazzGame1_new1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_FlazzGame1_new1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_FlazzGame1_new1DataSet.xss">
+      <DependentUpon>_FlazzGame1_new1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_FlazzGame1_new1DataSet1.xsc">
+      <DependentUpon>_FlazzGame1_new1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_FlazzGame1_new1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_FlazzGame1_new1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_FlazzGame1_new1DataSet1.xss">
+      <DependentUpon>_FlazzGame1_new1DataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -162,6 +210,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FlazzGame.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FlazzGame1-new1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="FlazzGame1.accdb">

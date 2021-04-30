@@ -19,6 +19,8 @@
         <Button x:Name="Wrong_1" Content="1681" HorizontalAlignment="Left" Height="71" Margin="511,194,0,0" VerticalAlignment="Top" Width="245" FontSize="36" Click="Wrong_1_Click" Background="White" BorderBrush="Black"/>
         <Button x:Name="Wrong_2" Content="1762" HorizontalAlignment="Left" Height="72" Margin="35,305,0,0" VerticalAlignment="Top" Width="249" FontSize="36" Click="Wrong_2_Click" BorderBrush="Black" Background="White"/>
         <Button x:Name="Wrong_3" Content="1672" HorizontalAlignment="Left" Height="72" Margin="511,305,0,0" VerticalAlignment="Top" Width="245" FontSize="36" Click="Wrong_3_Click" Background="White" BorderBrush="Black"/>
+        <Button Name="Next" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Margin="348,341,0,0" Height="70" Click="Next_Click"/>
+        <TextBox Name="question_number" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120" Margin="348,147,0,0"/>
 
     </Grid>
 </Window>

@@ -37,9 +37,9 @@ namespace Flazz_Game
         {
             Answer.Background = Brushes.Green;
 
-            Wrong_1.Click -= Wrong_1_Click;
-            Wrong_2.Click -= Wrong_2_Click;
-            Wrong_3.Click -= Wrong_3_Click;
+            Wrong_1.Click -= Wrong_1_Click;//https://stackoverflow.com/questions/34284232/disable-click-button-event-c-sharp
+            Wrong_2.Click -= Wrong_2_Click;//https://stackoverflow.com/questions/34284232/disable-click-button-event-c-sharp
+            Wrong_3.Click -= Wrong_3_Click;//https://stackoverflow.com/questions/34284232/disable-click-button-event-c-sharp
         }
 
         private void Wrong_1_Click(object sender, RoutedEventArgs e)
@@ -67,9 +67,17 @@ namespace Flazz_Game
             Wrong_3.Background = Brushes.Red;
             Answer.Background = Brushes.Green;
 
-            Answer.Click -= Button_Click;
+            Answer.Click -= Button_Click;//https://stackoverflow.com/questions/34284232/disable-click-button-event-c-sharp
             Wrong_1.Click -= Wrong_1_Click;
             Wrong_2.Click -= Wrong_2_Click;
+        }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            int i = 0;
+             i = i + 1;
+            Bridges bridges = new Bridges();           
+            bridges.Questions(i);            
         }
     }
 }

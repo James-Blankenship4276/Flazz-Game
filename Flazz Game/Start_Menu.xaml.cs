@@ -62,7 +62,7 @@ namespace Flazz_Game
 
 
             Answers answers = new Answers();
-            
+            //quiz.Question.Text = flash.quiz1[3].name;
             //Questions questions1 = new Questions();
             //questions1.Load_Questions(0);
 
@@ -71,7 +71,7 @@ namespace Flazz_Game
           
             
                 quiz.Question.Text = Convert.ToString(bridges.questions[0]);
-                quiz.Answer.Content = Convert.ToString(answers.answers1[0].iscorrect);
+                //quiz.Answer.Content = Convert.ToString(answers.answers1[0].isAnwser);
             
             
             
@@ -204,7 +204,7 @@ namespace Flazz_Game
         public void Load(int index) {
 
             Answers answers = new Answers();
-            answers.load_anwsers(cross[index]);
+            answers.load_anwsers(cross[0]);
         
         
         
@@ -217,15 +217,15 @@ namespace Flazz_Game
             Bridges current = cross[index];
             string query = "select Question from Questions where ID=" + current.QuestionID1;//Reads in  the Question field from the Questions table
             OleDbCommand cmd = new OleDbCommand(query, cn);
-           
+         
             OleDbDataReader read = cmd.ExecuteReader();
             while (read.Read())
             {
                 questions.Add(read[0].ToString());//Reads in question text 
-                index++;
+                
             }
-            
            
+
 
         }
         public int getIndex( int index) {

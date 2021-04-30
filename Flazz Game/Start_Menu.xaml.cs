@@ -54,22 +54,29 @@ namespace Flazz_Game
             Bridges bridges = new Bridges();
 
             bridges.Load_Bridges();
-            bridges.Load();
+           
             bridges.Questions(0);
-        
+            bridges.Load(0);
+
+
+
 
             Answers answers = new Answers();
+            
             //Questions questions1 = new Questions();
             //questions1.Load_Questions(0);
-            
-            
 
 
+
+          
+            
                 quiz.Question.Text = Convert.ToString(bridges.questions[0]);
-            //quiz.Answer.Content = Convert.ToString(answers.answers1[0].isAnwser);
+                quiz.Answer.Content = Convert.ToString(answers.answers1[0].iscorrect);
+            
+            
             
 
-            }
+        }
             
             //answers.load_anwsers();
             // Quiz quiz1 = new Quiz();
@@ -95,7 +102,7 @@ namespace Flazz_Game
         public string name;
 
 
-        public List<Flash> quiz1 = new List<Flash>();
+        public List<Flash> quiz1 = new List<Flash>();//List that  holds quiz information 
         public Flash()
         {
         
@@ -107,7 +114,7 @@ namespace Flazz_Game
             cn.Open();
             OleDbDataReader read = cmd.ExecuteReader();
             //string data = "";
-            while (read.Read())
+            while (read.Read())// Reads the quiz information into the list
             {
                 int x = Convert.ToInt32(read[0].ToString());
                 //string y = read[1].ToString();
@@ -129,11 +136,11 @@ namespace Flazz_Game
 
             cn.Open();
             OleDbDataReader read = cmd.ExecuteReader();
-            //string data = "";
+            
             while (read.Read())
             {
                 int x = Convert.ToInt32(read[0].ToString());
-                //string y = read[1].ToString();
+                
                 quiz1.Add(new Flash(id = x, name = read[1].ToString()));
             }
         }
@@ -144,8 +151,8 @@ namespace Flazz_Game
         public int QuizID1;
         public int QuestionID1;
         public OleDbConnection cn;
-        public List<Bridges> cross = new List<Bridges>();
-        public List<string> questions = new List<string>();
+        public List<Bridges> cross = new List<Bridges>();//Holds the information to find the questions and answers
+        public List<string> questions = new List<string>();// Holds question strings
 
 
 
@@ -176,7 +183,7 @@ namespace Flazz_Game
             string connectionstring = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\blank\Documents\FlazzGame1.accdb";
             cn = new OleDbConnection(connectionstring);
             Flash flash = new Flash();
-            string query = "select * from QuizBridge where QuizID=" + flash.quiz1[1].id;
+            string query = "select * from QuizBridge where QuizID=" + flash.quiz1[1].id;//Take the quiz ID as a conditinal to find 
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
 
@@ -185,19 +192,19 @@ namespace Flazz_Game
            
             while (read.Read())
             {
-                int x = Convert.ToInt32(read[1].ToString());
-                int y = Convert.ToInt32(read[2].ToString());
-                cross.Add(new Bridges(QuizID1 = x, QuestionID1 = y));
+                int x = Convert.ToInt32(read[1].ToString());//QuizID from Database 
+                int y = Convert.ToInt32(read[2].ToString());//QuestionID
+                cross.Add(new Bridges(QuizID1 = x, QuestionID1 = y));//Reads into cross List 
 
 
             }
 
 
         }
-        public void Load() {
+        public void Load(int index) {
 
             Answers answers = new Answers();
-            answers.load_anwsers(cross[0]);
+            answers.load_anwsers(cross[index]);
         
         
         
@@ -208,24 +215,32 @@ namespace Flazz_Game
           
 
             Bridges current = cross[index];
-            string query = "select Question from Questions where ID=" + current.QuestionID1;
+            string query = "select Question from Questions where ID=" + current.QuestionID1;//Reads in  the Question field from the Questions table
             OleDbCommand cmd = new OleDbCommand(query, cn);
            
             OleDbDataReader read = cmd.ExecuteReader();
             while (read.Read())
             {
-                questions.Add(read[0].ToString());
+                questions.Add(read[0].ToString());//Reads in question text 
+                index++;
             }
             
            
 
+        }
+        public int getIndex( int index) {
+            return index + 1;
+        
+        
+        
+        
         }
        
 
     }
     public class Answers
     {
-        public List<Answers> answers1 = new List<Answers>();
+        public List<Answers> answers1 = new List<Answers>();//List that holds anwsers
         public string isAnwser;
         public bool iscorrect;
         public OleDbConnection cn;
@@ -255,8 +270,9 @@ namespace Flazz_Game
 
         public void load_anwsers(Bridges current)
         {
-            
 
+            Bridges bridges = new Bridges();
+            bridges.Load_Bridges();
            
           
             string query = "Select * from Anwsers where QuestionID=" + current.QuestionID1;
@@ -272,6 +288,7 @@ namespace Flazz_Game
                 answers1.Add(new Answers(read[1].ToString(), val));
 
             }
+            cn.Close();
 
         }
     }

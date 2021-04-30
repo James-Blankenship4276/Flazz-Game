@@ -74,10 +74,20 @@ namespace Flazz_Game
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            int i = 0;
-             i = i + 1;
-            Bridges bridges = new Bridges();           
-            bridges.Questions(i);            
+           
+          
+            Bridges bridges = new Bridges();
+            Flash flash = new Flash();
+            //flash.load_quiz();
+            
+           bridges.Load_Bridges();
+           
+            
+           
+            Quiz quiz = new Quiz();
+          
+            quiz.Question.Text = bridges.questions[0];
+       
         }
     }
 }
